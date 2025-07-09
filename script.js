@@ -1,43 +1,43 @@
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+// Activate only after DOM loads
+document.addEventListener("DOMContentLoaded", function () {
+    // Feature 5: Contact form alert
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("📬 Thank you! Your message has been sent.");
+        this.reset();
+        });
     }
-    body {
-      background: #0f172a;
-      color: #f8fafc;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    header, section {
-      max-width: 800px;
-      margin: 0 auto 4rem;
-    }
-    h1, h2 {
-      color: #22d3ee;
-    }
-    .btn {
-      background: #22d3ee;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    .projects img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
+
+// Feature 8: Scroll nav highlight
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((section) => {
+        let sectionTop = section.offsetTop;
+
+        // Offset adjustment depending on section height
+        if (section.id === "hero") {
+        sectionTop -= 150; // Less offset for top section
+        } else {
+        sectionTop -= window.innerHeight / 2;
+        }
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+        }
+    });
+  });
+});

@@ -3,59 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Athieshan Kaneshakumaran | Web Developer</title>
-  <link href="style.css" rel="stylesheet">
+  <title>Athieshan | Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
-    <h1>Hello, I'm Athieshan Kaneshakumaran</h1>
-    <p>I build fast, clean websites that help small businesses grow. Let’s bring your ideas to life.</p>
-    <a href="#contact" class="btn">Let’s Work Together</a>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#offer">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="projects">
-    <h2>🛠️ Projects</h2>
-    <div class="project">
-      <h3>Landing Page</h3>
-      <p>A simple and elegant landing page for a local café.</p>
-      <img src="https://source.unsplash.com/800x400/?cafe" alt="Cafe Landing Page">
+  <!-- Hero Section -->
+  <section id="hero">
+  <div class="hero-container">
+    <img src="images/wolf-avatar.png" alt="Athieshan Logo" class="avatar-logo" />
+    <div class="hero-text">
+      <h1>Hi, I’m Athieshan.</h1>
+      <p>I design and code custom websites using HTML/CSS and creative 3D tools like Spline and Three.js. Let's build something great.</p>
+      <a href="#contact" class="cta-btn">Let’s Work Together</a>
     </div>
-    <div class="project">
-      <h3>Survey Form</h3>
-      <p>HTML/CSS project to collect user feedback.</p>
-      <img src="https://source.unsplash.com/800x400/?form" alt="Survey Form">
-    </div>
-    <div class="project">
-      <h3>Business Website</h3>
-      <p>A homepage for a local artist showcasing work and contact info.</p>
-      <img src="https://source.unsplash.com/800x400/?website" alt="Artist Website">
-    </div>
-  </section>
+  </div>
+</section>
 
+  <!-- About Section -->
   <section id="about">
-    <h2>👋 About Me</h2>
-    <p>I’m a web developer based in Germany. I love turning ideas into interactive websites. My mission: make design useful, clean, and affordable for everyone.</p>
+    <h2>About Me</h2>
+    <p>I’m a web developer based in Germany, focused on building custom HTML/CSS websites and creative online experiences. I work independently and value clean design, performance, and meaningful digital impact.</p>
   </section>
 
-  <section id="services">
-    <h2>💼 Services & Pricing</h2>
-    <ul>
-      <li>🧾 Landing Page – €100+</li>
-      <li>📦 Full Business Website – €300+</li>
-      <li>🌐 3D Website (Spline/Three.js) – €1000+</li>
-    </ul>
+  <!-- Offer Section -->
+  <section id="offer">
+    <h2>What I Offer</h2>
+    <div class="offer-grid">
+      <div class="offer-item">
+        <h3>⚡ Landing Pages</h3>
+        <p>Fast, mobile-optimized landing pages for products, events, or services — designed to convert visitors into action.</p>
+      </div>
+      <div class="offer-item">
+        <h3>🎨 Portfolio Websites</h3>
+        <p>Custom-built personal or client portfolios with clean layout, responsive design, and contact forms.</p>
+      </div>
+      <div class="offer-item">
+        <h3>🌐 3D Web Experiences</h3>
+        <p>Interactive websites built using Spline or Three.js — ideal for creative brands, artists, and product showcases.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Selected Work</h2>
+
+    <div class="project-card">
+      <h3>Café Landing Page</h3>
+      <p><strong>Problem:</strong> A local café needed a modern site to increase visibility and bookings.</p>
+      <p><strong>Solution:</strong> Built a minimal, mobile-first landing page highlighting reviews, atmosphere, and booking access.</p>
+      <p><strong>Result:</strong> Tripled online reservations within 2 weeks.</p>
+      <a href="#" class="view-btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Artist Portfolio</h3>
+      <p><strong>Problem:</strong> An artist needed a space to showcase work and take commissions.</p>
+      <p><strong>Solution:</strong> Designed a clean homepage with gallery and contact form.</p>
+      <p><strong>Result:</strong> Led to first 3 paid clients and gallery invitations.</p>
+      <a href="#" class="view-btn">View Project</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact">
-    <h2>📬 Contact Me</h2>
-    <p>Email: AthieshanKaneshakumaran@email.com</p>
-    <a href="mailto:your@email.com" class="btn">Send an Email</a>
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Athieshan Kaneshakumaran — Web Developer</p>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
