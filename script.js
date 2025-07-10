@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
         if (section.id === "hero") {
         sectionTop -= 150; // Less offset for top section
         } else {
-        sectionTop -= window.innerHeight / 2;
+        sectionTop -= window.innerHeight / 3;
         }
         const sectionHeight = section.offsetHeight;
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
