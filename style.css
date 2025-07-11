@@ -229,6 +229,9 @@ nav a.active {
   font-weight: bold;
   font-size: 0.9rem;
   transition: background 0.3s ease;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .view-btn:hover {
