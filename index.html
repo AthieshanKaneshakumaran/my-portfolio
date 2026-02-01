@@ -1,130 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Athieshan | Web Developer</title>
+
+  <title>Athieshan | Webdesign & Frontend Development</title>
+
+  <meta name="description" content="Moderne Onepager & Mini-Websites für Selbstständige und lokale Businesses – mobiloptimiert, schnell und individuell. Lieferung in 3–5 Tagen inkl. Feedbackrunde." />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Optional: Favicons / OG (wenn du die Dateien hast) -->
+  <link rel="icon" href="images/favicon.png" />
+  <meta property="og:title" content="Athieshan | Webdesign & Frontend Development" />
+  <meta property="og:description" content="Deine neue Website in 72 Stunden. Klar. Modern. Individuell." />
+  <meta property="og:image" content="images/og-image.png" />
+  <meta property="og:type" content="website" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <!-- Navigation -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#offer">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <div class="nav-inner">
+        <a class="brand" href="#hero" aria-label="Zur Startsektion">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">Athieshan</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <ul id="nav-menu" class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#packages">Was du bekommst</a></li>
+          <li><a href="#services">Leistungen</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-  <div class="hero-container">
-    <img src="images/wolf-avatar.png" alt="Athieshan Logo" class="avatar-logo" />
-    <div class="hero-text">
-      <h1>Hi, I’m Athieshan.</h1>
-      <p>I design and code custom websites using HTML/CSS and creative 3D tools like Spline and Three.js. Let's build something great.</p>
-      <a href="#contact" class="cta-btn">Let’s Work Together</a>
-    </div>
-  </div>
-</section>
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="container hero-container">
+        <div class="hero-left">
+          <img src="images/wolf-avatar.png" alt="Athieshan Logo" class="avatar-logo" />
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a web developer based in Germany, focused on building custom HTML/CSS websites and creative online experiences. I work independently and value clean design, performance, and meaningful digital impact.</p>
-  </section>
+          <div class="hero-text">
+            <h1>Deine neue Website in 72 Stunden. Klar. Modern. Individuell.</h1>
+            <p>
+              Ich erstelle hochwertige Onepager & Mini-Websites für Selbstständige,
+              lokale Businesses und Creator – komplett individuell gestaltet,
+              mobil-optimiert und in wenigen Tagen startbereit.
+            </p>
 
-  <!-- Offer Section -->
-  <section id="offer">
-    <h2>What I Offer</h2>
-    <div class="offer-grid">
-      <div class="offer-item">
-        <h3>⚡ Landing Pages</h3>
-        <p>Fast, mobile-optimized landing pages for products, events, or services — designed to convert visitors into action.</p>
-      </div>
-      <div class="offer-item">
-        <h3>🎨 Portfolio Websites</h3>
-        <p>Custom-built personal or client portfolios with clean layout, responsive design, and contact forms.</p>
-      </div>
-      <div class="offer-item">
-        <h3>🌐 3D Web Experiences (Coming soon)</h3>
-        <p>Interactive websites built using Spline or Three.js — ideal for creative brands, artists, and product showcases.</p>
-      </div>
-    </div>
-  </section>
+            <div class="trust-chips" aria-label="Vorteile">
+              <span>⚡ Lieferung: 3–5 Tage</span>
+              <span>📱 100% mobiloptimiert</span>
+              <span>💬 1 Feedbackrunde inkl.</span>
+            </div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Kostenloses Erstgespräch</a>
+              <a href="#projects" class="btn btn-secondary">Portfolio ansehen</a>
+            </div>
 
-    <div class="project-card project-showcase">
-      <img src="images/Artitst-Portfolio-Preview.png" alt="Artist Portfolio Preview" class="project-thumb-large" />
-      <div class="project-text">
-        <h3>Practice Project: Artist Portfolio</h3>
-        <p>This one-page artist portfolio is built with HTML and CSS, showcasing a clean layout, gallery preview, and commission-ready contact form. Designed to work well on both mobile and desktop.</p>
-        <a href="https://athieshankaneshakumaran.github.io/artist-portfolio/" class="view-btn">View Live</a>
-      </div>
-    </div>
-
-    <div class="project-card project-showcase">
-      <img src="images/Css-FlexGrid-Preview.png" alt="Css FlexGrid Preview" class="project-thumb-large" />
-      <div class="project-text">
-        <h3>Practice Project: CSS Showcase</h3>
-        <p>
-          This project demonstrates my understanding of core CSS concepts including layout, colors, and responsive design. It’s a styled static page built from scratch to practice structure and visual design.
-        </p>
-        <a href="https://athieshankaneshakumaran.github.io/css-showcase/" class="view-btn">View Live</a>
-      </div>
-    </div>
-
-    <div class="project-card project-showcase">
-        <div class="finance-images">
-          <img src="images/finance-login-preview.png" alt="Login Page" />
-          <img src="images/finance-dashboard-preview.png" alt="Dashboard Page" />
+            <p class="hero-note">
+              <strong>Hinweis:</strong> Keine Templates. Kein Baukasten. 100% hand-coded HTML/CSS (+ optional JS).
+            </p>
+          </div>
         </div>
-      <div class="project-text">
-        <h3>Client Project: Finance App Login & Dashboard</h3>
-        <p>
-        I created a clean, responsive login + dashboard web app for a finance project. The goal was to build a simple, intuitive UI that allows users to sign in and view their balance. The client requested a dark theme with clear layout and mobile compatibility.
-        </p>
-            <!-- Tech tags -->
-        <div class="tech-tags">
-          <span class="tech-tag">HTML</span>
-          <span class="tech-tag">CSS</span>
-          <span class="tech-tag">JavaScript</span>
-        </div>
-        <!-- Testimonial -->
-        <blockquote class="testimonial">
-          “Just wanted to say how happy I am with the website I got. The dev absolutely killed it — super clean design, works perfectly, and he handled everything like a pro. Communication was smooth, he understood exactly what I needed, and delivered even better than I expected.”
-          <br><strong>— Client via Reddit (u/Choice_Attorney_5852)</strong>
-        </blockquote>
-        <a href="https://athieshankaneshakumaran.github.io/Finance-App-Login-Dashboard/" class="view-btn">View Live</a>  
       </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="section">
+      <div class="container card">
+        <h2>Was du bekommst</h2>
+        <p class="muted">
+          Maßgeschneiderte Websites, die professionell aussehen, schnell laden und dein Angebot klar vermitteln.
+          Kein Baukasten, keine generischen Templates – sondern eine Seite, die Vertrauen aufbaut und Kunden bringt.
+        </p>
+
+        <ul class="checklist">
+          <li>Individuelles Webdesign (keine Templates)</li>
+          <li>Saubere HTML/CSS-Umsetzung + optional 3D-Elemente</li>
+          <li>Mobiloptimierung für Smartphone, Tablet & Desktop</li>
+          <li>Moderner, ruhiger Look mit Fokus auf Lesbarkeit</li>
+          <li>Kontaktbereich oder Terminbuchung</li>
+          <li>Technischer Setup & Launch</li>
+        </ul>
+
+        <p class="meta">
+          <strong>Preisrahmen:</strong> 500–1.000 € je nach Umfang ·
+          <strong>Lieferzeit:</strong> 3–5 Tage inkl. Feedbackschleife
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Leistungen</h2>
+
+        <div class="grid">
+          <article class="service-card">
+            <h3>⚡ Landing Pages für Angebote & Aktionen</h3>
+            <p>Ideal für einzelne Produkte, Events oder Kampagnen. Klarer Fokus auf Conversion.</p>
+            <ul class="mini-list">
+              <li>Hero + Benefits + CTA</li>
+              <li>Kontakt / Booking</li>
+              <li>Mobil & schnell</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>🎨 Portfolio- & Business-Websites</h3>
+            <p>Für Selbstständige, Kreative und kleine Unternehmen, die online professionell wirken wollen.</p>
+            <ul class="mini-list">
+              <li>Sections nach Bedarf</li>
+              <li>Projekte / Referenzen</li>
+              <li>Starke Struktur & Copy</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>🌐 3D-Experiences (Beta)</h3>
+            <p>Interaktive Elemente mit Spline / Three.js für Marken, die sich visuell abheben wollen.</p>
+            <ul class="mini-list">
+              <li>3D Hero / Interaktionen</li>
+              <li>Performance-optimiert</li>
+              <li>Nur wenn es Sinn macht</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projekte</h2>
+
+        <article class="project-card project-showcase">
+          <img
+            src="images/Artitst-Portfolio-Preview.png"
+            alt="Vorschau: Artist Portfolio Website"
+            class="project-thumb-large"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="project-text">
+            <h3>Artist Portfolio Website (Concept)</h3>
+            <p>Onepager für eine fiktive Künstlerin, mit Fokus auf Portfolio-Galerie und Commission-Anfragen.</p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span>
+            </div>
+            <a class="btn btn-primary btn-sm" href="https://athieshankaneshakumaran.github.io/artist-portfolio/" target="_blank" rel="noopener">Live ansehen</a>
+          </div>
+        </article>
+
+        <article class="project-card project-showcase">
+          <img
+            src="images/Css-FlexGrid-Preview.png"
+            alt="Vorschau: CSS Showcase"
+            class="project-thumb-large"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="project-text">
+            <h3>CSS Layout & Styling Showcase (Concept)</h3>
+            <p>Demonstriert CSS-Konzepte wie Layout (Flex/Grid), Farben, Typografie und responsives Design.</p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Layout</span>
+            </div>
+            <a class="btn btn-primary btn-sm" href="https://athieshankaneshakumaran.github.io/css-showcase/" target="_blank" rel="noopener">Live ansehen</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="finance-images">
+            <img src="images/finance-login-preview.png" alt="Vorschau: Finance App Login" loading="lazy" decoding="async" />
+            <img src="images/finance-dashboard-preview.png" alt="Vorschau: Finance App Dashboard" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="project-text">
+            <h3>Client Project: Finance App Login & Dashboard</h3>
+            <p>
+              Cleanes, responsives Login + Dashboard UI. Ziel: simple, intuitive Oberfläche für Sign-in und Balance-Übersicht.
+            </p>
+
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+
+            <blockquote class="testimonial">
+              “Just wanted to say how happy I am with the website I got...”
+              <br><strong>— Client via Reddit (u/Choice_Attorney_5852)</strong>
+            </blockquote>
+
+            <a class="btn btn-primary btn-sm" href="https://athieshankaneshakumaran.github.io/Finance-App-Login-Dashboard/" target="_blank" rel="noopener">Live ansehen</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container card">
+        <h2>Über mich</h2>
+        <p>
+          Ich bin Athieshan – Webdesigner & Frontend Developer aus Deutschland, spezialisiert auf klare,
+          moderne Webauftritte, die Vertrauen schaffen und Umsatz bringen.
+        </p>
+        <p class="muted">
+          Ich verbinde Design, Struktur und technische Präzision zu Websites, die leicht zu bedienen sind,
+          Marken stärken und in jedem Detail professionell wirken. Mein Anspruch: Jede Seite soll aussehen,
+          als hätte sie das Zehnfache gekostet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-left">
+            <h2>Kontakt</h2>
+            <p class="muted">
+              Schreib mir kurz, was du brauchst (Branche, Ziel, Deadline). Ich antworte in der Regel innerhalb von 24 Stunden.
+            </p>
+
+            <div class="contact-points">
+              <div class="contact-point">✅ Kostenloses Erstgespräch</div>
+              <div class="contact-point">✅ Klare Lieferung in 3–5 Tagen</div>
+              <div class="contact-point">✅ Individuelles Design + Umsetzung</div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/athieshan.dev@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Neue Website Anfrage">
+            <input type="hidden" name="_template" value="table">
+
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="Dein Name" autocomplete="name" required>
+
+            <label class="sr-only" for="email">E-Mail</label>
+            <input id="email" type="email" name="email" placeholder="Deine E-Mail" autocomplete="email" required>
+
+            <label class="sr-only" for="message">Nachricht</label>
+            <textarea id="message" name="message" placeholder="Worum geht’s? (Branche, Ziel, Deadline, Budget)" rows="6" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Nachricht senden</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-fineprint">Mit dem Absenden stimmst du zu, dass ich dich per E-Mail kontaktieren darf.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Athieshan Kaneshakumaran — Webdesign & Frontend Development</p>
+      <p class="muted">Hand-coded · Schnell · Mobiloptimiert</p>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form" action="https://formsubmit.co/athieshan.dev@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Athieshan Kaneshakumaran — Web Developer</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

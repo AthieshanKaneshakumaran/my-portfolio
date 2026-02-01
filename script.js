@@ -1,43 +1,46 @@
-// Activate only after DOM loads
-document.addEventListener("DOMContentLoaded", function () {
-    // Feature 5: Contact form alert
-    const form = document.getElementById("contact-form");
-    if (form) {
-        form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("📬 Thank you! Your message has been sent.");
-        this.reset();
-        });
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile nav toggle
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
 
-// Feature 8: Scroll nav highlight
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-    const scrollY = window.pageYOffset;
-
-    sections.forEach((section) => {
-        let sectionTop = section.offsetTop;
-
-        // Offset adjustment depending on section height
-        if (section.id === "hero") {
-        sectionTop -= 150; // Less offset for top section
-        } else {
-        sectionTop -= window.innerHeight / 3;
-        }
-        const sectionHeight = section.offsetHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute("id");
-        }
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      toggleBtn.setAttribute("aria-expanded", String(isOpen));
     });
 
-    navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-        }
+    // close menu after click (mobile)
+    navMenu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        toggleBtn.setAttribute("aria-expanded", "false");
+      });
     });
-  });
+  }
+
+  // Form status message (better than alert)
+  const form = document.getElementById("contact-form");
+  const statusEl = document.getElementById("form-status");
+
+  if (form && statusEl) {
+    form.addEventListener("submit", () => {
+      statusEl.textContent = "✅ Danke! Nachricht wurde gesendet. Ich melde mich innerhalb von 24 Stunden.";
+    });
+  }
+
+  // Active nav link with IntersectionObserver
+  const navLinks = document.querySelectorAll(".nav a[href^='#']");
+  const sections = document.querySelectorAll("main section[id]");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.getAttribute("id");
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+      });
+    });
+  }, { threshold: 0.45 });
+
+  sections.forEach((section) => observer.observe(section));
 });
